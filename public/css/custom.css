@@ -1,0 +1,27 @@
+*{
+    font-family: Andale Mono, monospace;
+}
+.navbar {
+    height: 40px;
+    width: calc(100% - 200px);
+    left: 200px;
+}
+
+.sidebar .sidebar-header {
+    height: 40px;
+}
+
+.sidebar {
+    width: 200px;
+    height: 103%;
+}
+
+.main-wrapper .page-wrapper .page-content {
+
+    margin-top: 40px;
+}
+
+.main-wrapper .page-wrapper {
+    width: calc(100% - 200px);
+    margin-left: 200px;
+}
