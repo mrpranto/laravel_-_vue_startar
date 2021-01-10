@@ -13,13 +13,12 @@
                             <div class="d-flex align-items-center flex-wrap text-nowrap float-md-right">
 
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-outline-dark btn-icon-text mb-2 mb-md-0" data-toggle="dropdown">
-                                        Action
+                                    <app-dropdown>
                                         <app-icon :icon-class="'btn-icon-append'" name="chevron-down"/>
-                                    </button>
+                                    </app-dropdown>
 
                                     <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item btn-icon-text" href="#">
+                                        <a class="dropdown-item btn-icon-text" href="" @click.prevent="openModal()">
                                             <app-icon name="plus"/>
                                             Add New
                                         </a>
@@ -214,6 +213,11 @@
                 </div>
             </div>
         </div>
+
+
+        <create-edit-roles-component></create-edit-roles-component>
+
+
     </div>
 
 </template>
@@ -222,11 +226,23 @@
 export default {
 
     name: "RolesComponent",
+    data(){
+
+        return {
+
+        }
+
+    },
     props:{
         title:{
             type:String,
             default: "Roles"
         },
+    },
+    methods:{
+        openModal(){
+            $('#createAndUpdateModal').modal('show');
+        }
     }
 
 }
